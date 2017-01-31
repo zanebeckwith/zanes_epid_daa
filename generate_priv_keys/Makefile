@@ -46,4 +46,5 @@ $(OBJ): %.o: %.c
 
 clean:
 	rm -f $(OBJ) \
-		$(EXE)
+		$(EXE) \
+		mprivkey.dat iprivkey.dat pubkey.bin

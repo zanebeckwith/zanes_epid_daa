@@ -336,14 +336,15 @@ int main(int argc, char* argv[]) {
     //   break;
     // }
 
-    // Detect EPID version
-    result = EpidParseFileHeader(signed_pubkey, signed_pubkey_size,
-                                 &epid_version, NULL);
-    if (kEpidNoErr != result || kNumEpidVersions <= epid_version) {
-      log_error("EPID version can not be detected");
-      ret_value = EXIT_FAILURE;
-      break;
-    }
+    epid_version = kEpid2x;
+    // // Detect EPID version
+    // result = EpidParseFileHeader(signed_pubkey, signed_pubkey_size,
+    //                              &epid_version, NULL);
+    // if (kEpidNoErr != result || kNumEpidVersions <= epid_version) {
+    //   log_error("EPID version can not be detected");
+    //   ret_value = EXIT_FAILURE;
+    //   break;
+    // }
 
     // Configure hashalg based on group
     if (kEpid1x == epid_version) {

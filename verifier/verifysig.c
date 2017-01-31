@@ -62,7 +62,8 @@ EpidStatus Verify(EpidSignature const* sig, size_t sig_len, void const* msg,
     //   break;
     // }
     // ZVB: Just copy the pub key directly
-    EpidGroupPubKeyCertificate* buf_pubkey = (EpidGroupPubKeyCertificate*)signed_pub_key;
+    // EpidGroupPubKeyCertificate* buf_pubkey = (EpidGroupPubKeyCertificate*)signed_pub_key;
+    GroupPubKey* buf_pubkey = (GroupPubKey*)signed_pub_key;
     pub_key.gid = buf_pubkey->gid;
     pub_key.h1 = buf_pubkey->h1;
     pub_key.h2 = buf_pubkey->h2;
