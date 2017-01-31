@@ -1,0 +1,6 @@
+*.bin
+*.dat
+*.a
+verifier/verifysig
+signer/signmsg
+generate_priv_keys/generate_priv_key
